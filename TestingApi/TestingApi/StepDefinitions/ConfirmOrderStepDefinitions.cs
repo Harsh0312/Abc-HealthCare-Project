@@ -56,7 +56,8 @@ namespace TestingApi.StepDefinitions
         [When(@"I Add a item to Cart")]
         public void WhenIAddAItemToCart()
         {
-             chromeDriver.FindElement(By.XPath("html/body/div/div/div/div[1]/div/div[3]/a")).Click();
+            chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            chromeDriver.FindElement(By.XPath("html/body/div/div/div/div[1]/div/div[3]/button")).Click();
             //chromeDriver.FindElement(By.Id("Anovate Cream")).Click();
         }
 
